@@ -28,20 +28,14 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background(0);
-  
-  drawSprites();
+  background(255);
   ground.display();
   paper.display();
   bin.display();
-  
-
-  
- keyPressed();
 }
 function keyPressed(){
 	if (keyCode=== UP_ARROW){
-		Matter.Body.applyForce(paper.body,paper.body.position,{x:1,y:-5});
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:50,y:-80});
 	}
 }
 

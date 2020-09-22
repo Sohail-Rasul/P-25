@@ -8,6 +8,7 @@ class Paper{
     }
     this.radius=radius;
     this.body=Bodies.circle(x,y,this.radius,options)
+    this.image=loadImage("images/paper.png");            
     this.x=x;
     this.y=y;
     World.add(world,this.body);
@@ -20,8 +21,8 @@ display(){
     translate(pos.x,pos.y)
     fill("Maroon");
     strokeWeight(7)
-    ellipseMode(RADIUS);
-    ellipse(0,0,this.radius,this.radius);
+    imageMode(RADIUS);
+    image(this.image,0,0,this.radius,this.radius);
     pop()
 }
 }
